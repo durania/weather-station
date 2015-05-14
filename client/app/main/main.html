@@ -1,8 +1,18 @@
-<div class="col-xs-12 col-sm-6 col-md-4">
-    <h3 class="text-center">Weather
-        <a ng-click="reverse=!reverse" class="sorting glyphicon  pull-right" ng-class="{'glyphicon-triangle-bottom':!reverse,'glyphicon-triangle-top':reverse}">
-        </a>
-    </h3>
+<div ng-show="error || isLoading" class="container">
+    <br>
+    <div class="lead">
+        <div class="alert alert-warning" ng-show="!error && isLoading">
+             Loading...
+        </div>
+        <div class="alert alert-danger" ng-show="error && !isLoading">
+            <p>{{error.msg}}</p>
+            <p>Please try later</p>
+        </div>
+    </div>
+</div>
+<div ng-show="!error && !isLoading" class="col-xs-12 col-sm-6 col-md-4">
+    <h1 class="text-center">Weather    <a ng-click="reverse=!reverse" class="sorting glyphicon  pull-right" ng-class="{'glyphicon-triangle-bottom':!reverse,'glyphicon-triangle-top':reverse}">
+    </a></h1>
     <div class="list-group">
         <a class="list-group-item" ng-class="{'active':item.isActive}" ng-click="showDetails(item)" ng-repeat="item in list | orderBy:'-temp':reverse">
             <h3 class="pull-right">{{item.temp.toFixed(0)}} °C</h3>
@@ -10,9 +20,11 @@
         </a>
     </div>
 </div>
+
 <br>
+
 <div class="col-xs-12 col-sm-6 col-md-8">
-    <div ng-show="selected" class="panel panel-default">
+    <div ng-show="!error && !isLoading && selected" class="panel panel-default">
         <div class="panel-heading">
             <h3>{{selected.city}}</h3>
         </div>

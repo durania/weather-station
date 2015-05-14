@@ -50,8 +50,11 @@ angular.module('weatherStation')
                         });
                         deffered.resolve(res);
                     })
-                    .error(function(error) {
-                        deffered.reject(error);
+                    .error(function() {
+
+                        deffered.reject({
+                            msg: "Something Very Bad happened to the Open Wheather server"
+                        });
                     });
 
                 return deffered.promise;

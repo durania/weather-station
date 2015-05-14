@@ -46,7 +46,7 @@ describe('openWeather Factory', function() {
                         tempMin: 19.222,
                         pressure: 998.76,
                         humidity: 35,
-                        isActive:false
+                        isActive: false
                     })
                     expect(data).toContain({
                         city: '',
@@ -61,8 +61,31 @@ describe('openWeather Factory', function() {
                         tempMin: '',
                         pressure: '',
                         humidity: '',
-                        isActive:false
+                        isActive: false
                     });
+                });
+
+            $httpBackend.flush();
+            $httpBackend.verifyNoOutstandingExpectation();
+            $httpBackend.verifyNoOutstandingRequest();
+
+        });
+        it('should return un error if un error occur on the server', function() {
+            var ids = [
+                '2643743',
+                '2643339',
+                '2643123',
+                '2655603'
+            ];
+
+            $httpBackend
+                .expectGET('http://api.openweathermap.org/data/2.5/group?id=' + ids + '&units=metric')
+                .respond(501, {});
+
+            openWeather
+                .all()
+                .catch(function(err) {
+                    expect(err).toEqual({msg:"Something Very Bad happened to the Open Wheather server"});
                 });
 
             $httpBackend.flush();
