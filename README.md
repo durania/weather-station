@@ -2,19 +2,23 @@ Weather Station
 
 # Prerequisites
 
-- [Node and npm](http://nodejs.org)  
-- [MongoDB](http://www.mongodb.org/downloads) You need mongoDB to be installed and have the mongod process running.
+Node JS and Grunt need to be installed on your machine.
+- [Node and npm](http://nodejs.org)
 - [Grunt](http://gruntjs.com/) 
 
 
 
-# Installation and Start the application 
+# Run the App
 
-Run "npm start"
+In the terminal type the following line and press enter (it will automatically intall all the requested packages and will open the browser):
+npm start 
 
 
 
 # Testing
 
-Run "grunt test" to run the client unit tests with karma 
+To run the unit tests with karma, type the following line the terminal and press enter:
+grunt test
+
+
 
