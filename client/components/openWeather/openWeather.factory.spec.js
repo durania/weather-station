@@ -45,7 +45,8 @@ describe('openWeather Factory', function() {
                         tempMax: 19.555,
                         tempMin: 19.222,
                         pressure: 998.76,
-                        humidity: 35
+                        humidity: 35,
+                        isActive:false
                     })
                     expect(data).toContain({
                         city: '',
@@ -59,7 +60,8 @@ describe('openWeather Factory', function() {
                         tempMax: '',
                         tempMin: '',
                         pressure: '',
-                        humidity: ''
+                        humidity: '',
+                        isActive:false
                     });
                 });
 

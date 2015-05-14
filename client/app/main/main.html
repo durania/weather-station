@@ -1,11 +1,23 @@
-<div class="container">
-    <div class="row">
-        <h3>Weather</h3>
-        <ul class="list-group">
-            <li class="list-group-item" ng-repeat="item in list">
-                <h3 class="pull-right">{{item.temp.toFixed(0)}}</h3>
-                <h3>{{item.city}}</h3>
-            </li>
-        </ul>
+<div class="col-sm-12 col-md-4">
+    <h3 class="text-center">Weather
+        <a ng-click="reverse=!reverse" class="sorting glyphicon  pull-right" ng-class="{'glyphicon-triangle-bottom':!reverse,'glyphicon-triangle-top':reverse}">
+        </a>
+    </h3>
+    <div class="list-group">
+        <a class="list-group-item" ng-class="{'active':item.isActive}" ng-click="showDetails(item)" ng-repeat="item in list | orderBy:'-temp':reverse">
+            <h3 class="pull-right">{{item.temp.toFixed(0)}}</h3>
+            <h3>{{item.city}}</h3>
+        </a>
+    </div>
+</div>
+<br>
+<div class="col-sm-12 col-md-8">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title">Panel title</h1>
+        </div>
+        <div class="panel-body">
+            Panel content
+        </div>
     </div>
 </div>

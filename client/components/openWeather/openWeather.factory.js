@@ -32,6 +32,7 @@ angular.module('weatherStation')
             this.tempMin = data.main.temp_min || '';
             this.pressure = data.main.pressure || '';
             this.humidity = data.main.humidity || '';
+            this.isActive = false;
         }
 
         return {

@@ -43,5 +43,13 @@ describe("MainCtrl", function() {
                 expect(scope.list.length).toEqual(2);
             });
         });
+        describe('scope.showDetails()', function() {
+            it('should make inactive all the items in the list but the one selected', function (done) {
+                scope.showDetails(scope.list[0])
+                scope.$digest();
+                expect(scope.list[0].isActive).toBeTruthy();
+                expect(scope.list[1].isActive).toBeFalsy();
+            });
+        });
     });
 });
