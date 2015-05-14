@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.8 (Mac OS X)" package="" timestamp="2015-05-14T10:53:09" id="0" hostname="Danieles-MacBook-Pro.local">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
+    </properties>
+  </testsuite>
+  <testsuite name="PhantomJS 1.9.8 (Mac OS X)" package="" timestamp="2015-05-14T10:53:09" id="0" hostname="Danieles-MacBook-Pro.local" tests="6" errors="0" failures="0" time="0.028">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34"/>
+    </properties>
+    <testcase name="should call the openWeather.all()" time="0.019" classname="PhantomJS 1.9.8 (Mac OS X).MainCtrl when inizializated"/>
+    <testcase name="should return an array that containing good data" time="0" classname="PhantomJS 1.9.8 (Mac OS X).MainCtrl when inizializated openWeather_all()"/>
+    <testcase name="should return default values" time="0.001" classname="PhantomJS 1.9.8 (Mac OS X).MainCtrl when inizializated openWeather_all() if no data is available for a city"/>
+    <testcase name="should be defined" time="0.003" classname="PhantomJS 1.9.8 (Mac OS X).openWeather Factory"/>
+    <testcase name="should be defined" time="0.001" classname="PhantomJS 1.9.8 (Mac OS X).openWeather Factory openWeather_all"/>
+    <testcase name="should return a promise wiht a json containing weather Data for all the cities" time="0.004" classname="PhantomJS 1.9.8 (Mac OS X).openWeather Factory openWeather_all"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

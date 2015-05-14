@@ -1,5 +1,11 @@
 <div class="container">
     <div class="row">
-        <h3>Content Here</h3>
+        <h3>Weather</h3>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="item in list">
+                <h3 class="pull-right">{{item.temp.toFixed(0)}}</h3>
+                <h3>{{item.city}}</h3>
+            </li>
+        </ul>
     </div>
 </div>

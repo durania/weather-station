@@ -28,7 +28,9 @@
     "karma-phantomjs-launcher": "~0.1.4",
     "karma": "~0.12.9",
     "karma-ng-html2js-preprocessor": "~0.1.0",
-    "grunt-express-server": "^0.4.19"
+    "grunt-express-server": "^0.4.19",
+    "karma-junit-reporter": "^0.2.2",
+    "karma-spec-reporter": "0.0.19"
   },
   "engines": {
     "node": ">=0.10.0"
